@@ -17,25 +17,20 @@ Structured like a real project and easy to extend into RAG or ML pipelines.
 ## Quickstart (uv)
 
 ### 1) Create venv and install dependencies
-```bash
 uv venv
 uv pip install psycopg2-binary python-dotenv
 uv lock
 
 ### 2) Initialize database + schema
-```bash
 uv run python scripts/10_init_db.py
 
 ### 3) Run a similarity query (SQL)
-```bash
 psql -d vectordb -f sql/050_queries.sql
 
 ### 4) Ingest more demo chunks (Python)
-```bash
 uv run python scripts/20_ingest_demo.py
 
 ### 5) Search via Python
-```bash
 uv run python scripts/30_search_demo.py
 
 ## Notes
@@ -45,10 +40,7 @@ uv run python scripts/30_search_demo.py
 ### 8) Run the full flow (sanity test)
 
 - Make sure Postgres.app is running.
-
 - Then:
-
-```bash
 uv run python scripts/00_check_connection.py
 uv run python scripts/10_init_db.py
 psql -d vectordb -f sql/050_queries.sql
