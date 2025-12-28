@@ -88,6 +88,8 @@ uv pip install psycopg2-binary python-dotenv
 uv lock
 ```
 
+---
+
 ### 2) Initialize database and schema
 ``` bash
 uv run python scripts/10_init_db.py
@@ -98,5 +100,78 @@ This will:
 - enable the vector extension
 - create tables for documents, chunks, and embeddings
 
+---
 
+### 3) Run a similarity query (SQL)
+``` bash
+psql -d vectordb -f sql/050_queries.sql
+```
 
+This demonstrates:
+- vector distance operators
+- ordering by similarity
+- basic semantic search patterns
+
+---
+
+### 4) Ingest demo chunks (Python)
+``` bash
+uv run python scripts/20_ingest_demo.py
+```
+
+This simulates:
+- chunk creation
+- embedding insertion
+- storage in PostgreSQL
+
+---
+
+### 5) Search via Python
+``` bash
+uv run python scripts/30_search_demo.py
+```
+
+This shows:
+- parameterized similarity queries
+- Python → SQL integration
+- application-style retrieval
+
+---
+
+Run the Full Flow (Sanity Test)
+- Make sure Postgres.app is running, then:
+``` bash
+uv run python scripts/00_check_connection.py
+uv run python scripts/10_init_db.py
+psql -d vectordb -f sql/050_queries.sql
+uv run python scripts/20_ingest_demo.py
+uv run python scripts/30_search_demo.py
+```
+
+---
+
+**Notes**
+- Embedding dimension is set to VECTOR(3) for a minimal demo
+- For real-world usage:
+- use 384 / 768 / 1536 dimensions
+- add ANN indexes (HNSW or IVFFlat)
+- PostgreSQL + pgvector is often sufficient for small to medium-scale RAG systems
+
+---
+
+**Architecture Notes**
+- PostgreSQL acts as both the relational store and vector store
+- pgvector enables similarity search without external databases
+- This pattern works well when:
+  - data already lives in Postgres
+  - operational simplicity matters
+  - latency requirements are moderate
+
+---
+
+**Possible Extensions**
+- Add ANN indexes for large-scale datasets
+- Plug in real embeddings (OpenAI, SentenceTransformers, etc.)
+- Add a RAG layer (LLM + retriever)
+- Wrap queries behind a FastAPI service
+- Add Docker Compose for infra parity
