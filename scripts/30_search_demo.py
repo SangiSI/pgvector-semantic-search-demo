@@ -10,10 +10,10 @@ def main() -> None:
     cur = conn.cursor()
     cur.execute(
         """
-        SELECT d.title, c.chunk_index, c.content, (c.embedding <-> %s) AS distance
+        SELECT d.title, c.chunk_index, c.content, (c.embedding <-> %s::vector) AS distance
         FROM chunks c
         JOIN documents d ON d.id = c.document_id
-        ORDER BY c.embedding <-> %s
+        ORDER BY c.embedding <-> %s::vector
         LIMIT 5;
         """,
         (query_embedding, query_embedding),

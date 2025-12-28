@@ -5,6 +5,6 @@
 --  - inner product: vector_ip_ops
 
 -- Example (cosine):
--- CREATE INDEX IF NOT EXISTS chunks_embedding_hnsw
--- ON chunks
--- USING hnsw (embedding vector_cosine_ops);
+CREATE INDEX IF NOT EXISTS chunks_embedding_hnsw
+ON chunks
+USING hnsw (embedding vector_cosine_ops);
