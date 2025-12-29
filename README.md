@@ -12,8 +12,11 @@ This repository focuses on **clarity, correctness, and real-world structure**, r
 ## What this repo demonstrates
 - pgvector extension setup
 - RAG-friendly schema (documents + chunks + embeddings)
-- Similarity search queries in SQL
 - Python ingestion + search scripts
+- Vector columns using `VECTOR(n)`
+- Similarity search using native PostgreSQL operators
+- SQL-first querying with optional Python helpers
+- A project layout that mirrors production systems
 
 ---
 
@@ -27,16 +30,6 @@ This repository focuses on **clarity, correctness, and real-world structure**, r
   - retrieval-augmented generation (RAG)
   - ML / NLP pipelines
   - in-database vector workloads
-
----
-
-## What This Repo Demonstrates
-
-- pgvector extension setup
-- Vector columns using `VECTOR(n)`
-- Similarity search using native PostgreSQL operators
-- SQL-first querying with optional Python helpers
-- A project layout that mirrors production systems
 
 ---
 
