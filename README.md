@@ -5,6 +5,16 @@ Structured like a real project and easy to extend into **RAG** or **ML pipelines
 
 This repository focuses on **clarity, correctness, and real-world structure**, rather than minimal examples.
 
+## Architecture Overview
+
+![Architecture Overview](images/architecture.png)
+
+## What this repo demonstrates
+- pgvector extension setup
+- RAG-friendly schema (documents + chunks + embeddings)
+- Similarity search queries in SQL
+- Python ingestion + search scripts
+
 ---
 
 ## Goal of this Repository
