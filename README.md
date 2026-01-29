@@ -1,5 +1,7 @@
 # pgvector Semantic Search Demo (PostgreSQL)
 
+![Pylint](https://github.com/SangiSI/pgvector-semantic-search-demo/actions/workflows/pylint.yml/badge.svg)
+
 A clean learning/demo repository showing how to use **PostgreSQL + pgvector** for vector similarity search.  
 Structured like a real project and easy to extend into **RAG** or **ML pipelines**.
 
@@ -178,3 +180,16 @@ uv run python scripts/30_search_demo.py
 - Add a RAG layer (LLM + retriever)
 - Wrap queries behind a FastAPI service
 - Add Docker Compose for infra parity
+
+## Quality & Tooling
+This repository follows lightweight quality checks aligned with real-world applied projects:
+
+- **Linting**: `pylint` (configured via `pyproject.toml`)
+- **CI**: GitHub Actions
+- **Environment management**: `uv` with lockfile-based reproducibility
+
+Run linting locally:
+
+```bash
+uv sync --extra dev
+uv run pylint main.py scripts
