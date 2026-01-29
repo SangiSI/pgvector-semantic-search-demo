@@ -14,7 +14,7 @@ dev = [
 [tool.pylint.main]
 py-version = "3.10"
 jobs = 0
-fail-under = 0
+fail-under = 7.5
 ignore-paths = [
   "^docs/",
   "^images/",
