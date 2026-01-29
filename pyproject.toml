@@ -4,7 +4,9 @@ version = "0.1.0"
 description = "End-to-end demo of semantic search using pgvector and Python"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+  "psycopg2-binary>=2.9",
+]
 
 [project.optional-dependencies]
 dev = [
