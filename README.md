@@ -6,7 +6,7 @@
 ![pgvector](https://img.shields.io/badge/pgvector-ext-informational)
 ![Pipeline](https://img.shields.io/badge/Pipeline-E2E-green)
 ![Type](https://img.shields.io/badge/Type-SemanticSearch-purple)
-![License](https://img.shields.io/github/license/SangiSI/pgvector-semantic-search-demo)
+![LICENSE](https://img.shields.io/github/license/SangiSI/pgvector-semantic-search-demo)
 
 A clean learning/demo repository showing how to use **PostgreSQL + pgvector** for vector similarity search.  
 Structured like a real project and easy to extend into **RAG** or **ML pipelines**.
