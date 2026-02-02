@@ -13,6 +13,8 @@ Structured like a real project and easy to extend into **RAG** or **ML pipelines
 
 This repository focuses on **clarity, correctness, and real-world structure**, rather than minimal examples.
 
+> ⭐ If this repository helps you, please consider starring it and crediting the source.
+
 ## Architecture Overview
 
 ![Architecture Overview](images/architecture.png)
@@ -199,3 +201,17 @@ Run linting locally:
 ```bash
 uv sync --extra dev
 uv run pylint main.py scripts
+```
+
+---
+
+## Attribution & Credit
+
+If you use this repository — including its ideas, code, structure, or pipeline —
+in research, blogs, demos, internal tools, or production systems, please credit:
+
+**Sangam Kumar Singh**  
+GitHub: https://github.com/SangiSI  
+Repository: https://github.com/SangiSI/pgvector-semantic-search-demo
+
+This project is released under the MIT License, which requires attribution.
