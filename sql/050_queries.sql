@@ -1,3 +1,6 @@
+-- Demo vector similarity search using pgvector (L2 distance)
+-- Retrieves the top-k most similar chunks for a given query embedding
+
 SELECT
   c.id,
   d.title,
