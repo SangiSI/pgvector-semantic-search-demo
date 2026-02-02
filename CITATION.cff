@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: "pgvector Semantic Search Demo"
+message: "If you use this work, please cite it."
+type: software
+
+authors:
+  - given-names: Sangam Kumar
+    family-names: Singh
+    orcid: https://orcid.org/0000-0002-4448-8285
+    website: https://github.com/SangiSI
+
+repository-code: https://github.com/SangiSI/pgvector-semantic-search-demo
+url: https://github.com/SangiSI/pgvector-semantic-search-demo
+
+license: MIT
+year: 2026
